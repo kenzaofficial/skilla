@@ -1,14 +1,27 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <default-layout>
+    <template v-slot:header>
+      <header></header>
+    </template>
+    <template v-slot:aside>
+      <aside></aside>
+    </template>
+    <template v-slot:main>
+      <main></main>
+    </template>
+    <template v-slot:footer>
+      <footer></footer>
+    </template>
+  </default-layout>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import defaultLayout from './components/default-layout.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    defaultLayout,
   },
 };
 </script>
