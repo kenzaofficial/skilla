@@ -1,15 +1,19 @@
 <template>
-  <header>
-    <slot name="header"></slot>
+  <header class="header">
+    <div class="header__container container">
+      <slot name="header"></slot>
+    </div>
   </header>
-  <aside>
+  <aside class="aside">
     <slot name="aside"></slot>
   </aside>
   <main>
     <slot name="main"></slot>
   </main>
-  <footer>
-    <slot name="footer"></slot>
+  <footer class="footer">
+    <div class="footer__container container">
+      <slot name="footer"></slot>
+    </div>
   </footer>
 </template>
 
@@ -18,3 +22,15 @@ export default {
   name: 'default-layout',
 };
 </script>
+
+<style>
+.aside {
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+</style>
