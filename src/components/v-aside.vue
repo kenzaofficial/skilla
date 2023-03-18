@@ -1,50 +1,10 @@
 <template>
   <img src="../assets/logo.svg" width="109" height="28" class="logo" />
   <ul class="aside__list list">
-    <li v-for="(item, index) in items" :key="index" class="list__item">
-      <img :src="imgPath[index]" class="list__img" />
-      <span class="list__text"> {{ item }}</span>
+    <li v-for="(item, index) in nav" :key="index" class="list__item">
+      <img :src="item.imgPath" class="list__img" />
+      <span class="list__text"> {{ item.description }}</span>
     </li>
-    <!-- <li class="list__item">
-      <img src="../assets/list/icon_01.svg" alt="icon1" class="list__icon" />
-      <span class="list__text">Итоги</span>
-    </li>
-    <li class="list__item">
-      <img src="../assets/list/icon_02.svg" alt="icon1" class="list__icon" />
-      <span class="list__text">Заказы</span>
-    </li>
-    <li class="list__item">
-      <img src="../assets/list/icon_03.svg" alt="icon1" class="list__icon" />
-      <span class="list__text">Сообщения</span>
-    </li>
-    <li class="list__item list__item--active">
-      <img src="../assets/list/icon_04.svg" alt="icon1" class="list__icon" />
-      <span class="list__text">Звонки</span>
-    </li>
-    <li class="list__item">
-      <img src="../assets/list/icon_05.svg" alt="icon1" class="list__icon" />
-      <span class="list__text">Контрагенты</span>
-    </li>
-    <li class="list__item">
-      <img src="../assets/list/icon_06.svg" alt="icon1" class="list__icon" />
-      <span class="list__text">Документы</span>
-    </li>
-    <li class="list__item">
-      <img src="../assets/list/icon_07.svg" alt="icon1" class="list__icon" />
-      <span class="list__text">Исполнители</span>
-    </li>
-    <li class="list__item">
-      <img src="../assets/list/icon_08.svg" alt="icon1" class="list__icon" />
-      <span class="list__text">Отчеты</span>
-    </li>
-    <li class="list__item">
-      <img src="../assets/list/icon_09.svg" alt="icon1" class="list__icon" />
-      <span class="list__text">База знаний</span>
-    </li>
-    <li class="list__item">
-      <img src="../assets/list/icon_10.svg" alt="icon1" class="list__icon" />
-      <span class="list__text">Настройки</span>
-    </li> -->
   </ul>
 </template>
 
@@ -52,19 +12,48 @@
 export default {
   data() {
     return {
-      items: [
-        'Итоги',
-        'Заказы',
-        'Сообщения',
-        'Звонки',
-        'Контрагенты',
-        'Документы',
-        'Исполнители',
-        'Отчеты',
-        'База знаний',
-        'Настройки',
+      nav: [
+        {
+          imgPath: require('@/assets/list/icon_01.svg'),
+          description: 'Итоги',
+        },
+        {
+          imgPath: require('@/assets/list/icon_02.svg'),
+          description: 'Заказы',
+        },
+        {
+          imgPath: require('@/assets/list/icon_03.svg'),
+          description: 'Сообщения',
+        },
+        {
+          imgPath: require('@/assets/list/icon_04.svg'),
+          description: 'Звонки',
+        },
+        {
+          imgPath: require('@/assets/list/icon_05.svg'),
+          description: 'Контрагенты',
+        },
+        {
+          imgPath: require('@/assets/list/icon_06.svg'),
+          description: 'Документы',
+        },
+        {
+          imgPath: require('@/assets/list/icon_07.svg'),
+          description: 'Исполнители',
+        },
+        {
+          imgPath: require('@/assets/list/icon_08.svg'),
+          description: 'Отчеты',
+        },
+        {
+          imgPath: require('@/assets/list/icon_09.svg'),
+          description: 'База знаний',
+        },
+        {
+          imgPath: require('@/assets/list/icon_10.svg'),
+          description: 'Настройки',
+        },
       ],
-      imgPath: ['/assets/list/icon_01.svg', '../assets/list/icon_02.svg'],
     };
   },
 };
