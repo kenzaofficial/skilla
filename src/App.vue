@@ -1,6 +1,8 @@
 <template>
   <default-layout>
-    <template v-slot:header></template>
+    <template v-slot:header>
+      <v-header></v-header>
+    </template>
     <template v-slot:aside>
       <v-aside></v-aside>
     </template>
@@ -12,12 +14,14 @@
 <script>
 import VAside from './components/v-aside.vue';
 import defaultLayout from './components/default-layout.vue';
+import VHeader from './components/v-header.vue';
 
 export default {
   name: 'App',
   components: {
     defaultLayout,
     VAside,
+    VHeader,
   },
 };
 </script>
@@ -27,8 +31,8 @@ body {
   margin: 0;
 }
 
-.aside {
-  background-color: #091336;
-  max-width: 240px;
+#app {
+  width: 100%;
+  display: flex;
 }
 </style>

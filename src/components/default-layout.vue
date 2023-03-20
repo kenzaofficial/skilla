@@ -24,11 +24,9 @@ export default {
 </script>
 
 <style>
-.aside {
-  padding: 20px 0;
-}
-
 .container {
+  display: flex;
+  align-items: center;
   max-width: 100%;
   padding: 0 15px;
   margin: 0 auto;

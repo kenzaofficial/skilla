@@ -9,6 +9,18 @@
 </template>
 
 <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const listItems = document.querySelectorAll('.list__item');
+  console.log(listItems);
+  listItems.forEach(function (listItem) {
+    listItem.addEventListener('click', function () {
+      listItems.forEach(function (listItem) {
+        listItem.classList.remove('list__item--active');
+      });
+      listItem.classList.toggle('list__item--active');
+    });
+  });
+});
 export default {
   data() {
     return {
@@ -60,11 +72,20 @@ export default {
 </script>
 
 <style>
+.aside {
+  padding: 20px 0;
+  max-width: 240px;
+  width: 100%;
+  background-color: #091336;
+  order: -1;
+}
+
 .logo {
   padding: 0 14px;
 }
 
 .list {
+  height: 100vh;
   margin: 10px 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -72,10 +93,12 @@ export default {
 }
 
 .list__item {
+  box-sizing: border-box;
   padding: 14px;
   display: flex;
   align-items: center;
   column-gap: 12px;
+  border-left: 5px solid transparent;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -86,7 +109,7 @@ export default {
 
 .list__item--active {
   position: relative;
-  border-left: 3px solid #002cfb;
+  border-color: #ffd500;
   background-color: rgba(216, 228, 251, 0.32);
 }
 
