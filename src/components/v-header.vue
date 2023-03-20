@@ -1,6 +1,6 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
-  <span>Среда, 13 окт</span>
+  <span class="header__date">Среда, 13 окт</span>
   <ul class="header__progress-list progress-list">
     <li class="progress-list__item">
       <p class="progress-list__description">Новые звонки <span style="color:#28A879" class="progress-list__value">20 из
@@ -19,6 +19,13 @@
     </li>
   </ul>
   <input class="header__input" type="name" placeholder="ИП Сидорова Александра Михайловна">
+  <button type="button" class="header__dropdown">
+    <img src="@/assets/dropdown.svg">
+  </button>
+  <img class="header__avatar" src="@/assets/avatar.jpg">
+  <button type="button" class="header__dropdown">
+    <img src="@/assets/dropdown.svg">
+  </button>
 </template>
 
 <script>
@@ -26,14 +33,37 @@ export default {};
 </script>
 
 <style>
+.header {
+  padding: 15px 0;
+  box-shadow: 0px 4px 5px 0px #e9edf3;
+  align-self: flex-start;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__date {
+  font-size: 12px;
+  color: #899cb1;
+  margin-right: 75px;
+}
+
 .progress-list {
   display: flex;
-  column-gap: 20px;
+  margin: 0;
+  padding: 0;
+  column-gap: 30px;
   margin-right: 20px;
   list-style: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   color: #122945;
+}
+
+.progress-list__description {
+  margin: 0 0 10px 0;
 }
 
 .progress-list__bar {
@@ -66,7 +96,27 @@ export default {};
 }
 
 .header__input {
+  display: inline-block;
   border: none;
-  max-width: 270px;
+  max-width: 250px;
+  width: 100%;
+  padding-left: 40px;
+  background-image: url(@/assets/search.svg);
+  background-repeat: no-repeat;
+}
+
+.header__dropdown {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.header__avatar {
+  margin-left: auto;
+  max-width: 40px;
+  height: auto;
 }
 </style>

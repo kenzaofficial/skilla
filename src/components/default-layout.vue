@@ -7,8 +7,10 @@
   <aside class="aside">
     <slot name="aside"></slot>
   </aside>
-  <main>
-    <slot name="main"></slot>
+  <main class="main">
+    <div class="main__container container">
+      <slot name="main"></slot>
+    </div>
   </main>
   <footer class="footer">
     <div class="footer__container container">
@@ -25,10 +27,10 @@ export default {
 
 <style>
 .container {
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* align-items: center; */
   max-width: 100%;
-  padding: 0 15px;
+  padding: 0 100px;
   margin: 0 auto;
 }
 </style>
