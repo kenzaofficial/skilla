@@ -5,12 +5,6 @@
     <ul class="filter-row__list">
       <li v-for="(item, index) in filtres" :key="index" class="filter-row__item">
         {{ item.description }}</li>
-    <!-- <li class="filter-row__item">Все типы</li>
-      <li class="filter-row__item">Все сотрудники</li>
-      <li class="filter-row__item">Все звонки</li>
-      <li class="filter-row__item">Все источники</li>
-      <li class="filter-row__item">Все оценки</li>
-          <li class="filter-row__item">Все ошибки</li> -->
     </ul>
   </div>
 </template>
