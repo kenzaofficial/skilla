@@ -27,8 +27,6 @@ export default {
 
 <style>
 .container {
-  /* display: flex; */
-  /* align-items: center; */
   max-width: 100%;
   padding: 0 100px;
   margin: 0 auto;

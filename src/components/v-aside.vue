@@ -14,6 +14,7 @@ export default {
 
 <style>
 .aside {
+  position: relative;
   grid-row: 1/3;
   padding: 20px 0;
   max-width: 240px;
