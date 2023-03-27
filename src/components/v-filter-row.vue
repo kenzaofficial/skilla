@@ -18,19 +18,19 @@ export default {
           description: 'Все типы',
         },
         {
-          description: 'Все типы',
+          description: 'Все сотрудники',
         },
         {
-          description: 'Все типы',
+          description: 'Все звонки',
         },
         {
-          description: 'Все типы',
+          description: 'Все источники',
         },
         {
-          description: 'Все типы',
+          description: 'Все оценки',
         },
         {
-          description: 'Все типы',
+          description: 'Все ошибки',
         },
       ],
     };
@@ -41,6 +41,7 @@ export default {
 <style>
 .filter-row {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .filter-row__search {

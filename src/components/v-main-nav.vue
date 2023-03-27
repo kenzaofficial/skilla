@@ -1,10 +1,13 @@
-<!-- eslint-disable prettier/prettier -->
 <template>
   <nav class="main-nav">
     <ul class="main-nav-list">
-      // eslint-disable-next-line prettier/prettier
-      <li v-for="(item, index) in nav" :key="index" v-on:click="setActive(index)"
-        :class="{ 'main-nav-list__item--active': activeIndex === index }" class="main-nav-list__item">
+      <li
+        v-for="(item, index) in nav"
+        :key="index"
+        v-on:click="setActive(index)"
+        :class="{ 'main-nav-list__item--active': activeIndex === index }"
+        class="main-nav-list__item"
+      >
         <img :src="item.imgPath" class="main-nav-list__img" />
         <span class="main-nav-list__text"> {{ item.description }}</span>
       </li>
