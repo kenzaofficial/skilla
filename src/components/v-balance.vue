@@ -17,7 +17,7 @@ export default {};
   background-color: #fff;
   border-radius: 48px;
   padding: 9px 12px;
-  max-width: 145px;
+  max-width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
