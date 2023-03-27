@@ -46,7 +46,7 @@ export default {
 
 .filter-row__search {
   padding-left: 30px;
-  background: url(@/assets/search.svg) no-repeat center left;
+  background: url(@/assets/search.svg) no-repeat center left 5px;
   border: none;
   color: #5e7793;
 }
@@ -64,7 +64,7 @@ export default {
   padding: 10px 20px 10px 10px;
   background: url(@/assets/dropdown.svg) no-repeat center right 3px;
   cursor: pointer;
-  border-radius: 48px;
+  border-radius: 8px;
   color: #5e7793;
   transition: 0.3s;
 }

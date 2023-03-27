@@ -17,6 +17,7 @@ export default {};
   border: none;
   column-gap: 10px;
   cursor: pointer;
+  background-color: transparent;
   transition: 0.8s;
   border-radius: 48px;
   color: blue;
