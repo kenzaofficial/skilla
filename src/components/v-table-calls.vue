@@ -107,7 +107,6 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           this.list = data.results;
-          console.log(this.list);
         })
         .catch((error) => console.error(error));
     },
