@@ -54,7 +54,7 @@
               >
             </div>
           </td>
-          <td v-else-if="item.time < 59 && item.time > 0">
+          <td v-else-if="item.time < minuteDuration && item.time > 0">
             <div class="table-calls__grade">
               <span
                 class="table-calls__grade-marker table-calls__grade-marker--good"
