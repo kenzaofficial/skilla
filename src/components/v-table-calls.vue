@@ -18,13 +18,13 @@
           v-for="(item, index) in list"
           :key="index"
         >
-          <td v-if="item.in_out === 1">
+          <td v-if="item.in_out === 1 && item.status == 'Дозвонился'">
             <img src="@/assets/svg/incoming.svg" />
           </td>
-          <td v-if="item.in_out === 0">
+          <td v-if="item.in_out === 0 && item.status == 'Дозвонился'">
             <img src="@/assets/svg/outcoming.svg" />
           </td>
-          <td v-if="item.in_out === 2">
+          <td v-if="item.status === 'Не дозвонился'">
             <img src="@/assets/svg/missedcoming.svg" />
           </td>
           <td>
@@ -37,13 +37,13 @@
           </td>
           <td class="table-calls__phone-number">
             <a :href="'tel:' + item.partner_data.phone">{{
-              item.partner_data.phone
+              formattedTelNumber[index]
             }}</a>
           </td>
           <td>
             <span>{{ item.partner_data.name }}</span>
           </td>
-          <td v-if="item.time >= 59">
+          <td v-if="item.time >= minuteDuration">
             <div class="table-calls__grade">
               <span
                 class="table-calls__grade-marker table-calls__grade-marker--best"
@@ -54,7 +54,7 @@
               >
             </div>
           </td>
-          <td v-else-if="item.time < 59">
+          <td v-else-if="item.time < 59 && item.time > 0">
             <div class="table-calls__grade">
               <span
                 class="table-calls__grade-marker table-calls__grade-marker--good"
@@ -62,6 +62,16 @@
               <span
                 class="table-calls__grade-text table-calls__grade-text--good"
                 >Хорошо</span
+              >
+            </div>
+          </td>
+          <td v-else-if="item.time === 0">
+            <div class="table-calls__grade">
+              <span
+                class="table-calls__grade-marker table-calls__grade-marker--bad"
+              ></span>
+              <span class="table-calls__grade-text table-calls__grade-text--bad"
+                >Плохо</span
               >
             </div>
           </td>
@@ -75,8 +85,10 @@
 </template>
 
 <script>
+import dayjs from 'dayjs';
 export default {
   data: () => ({
+    minuteDuration: 59,
     token: 'Bearer testtoken',
     list: [],
     options: {},
@@ -102,7 +114,7 @@ export default {
   },
   computed: {
     formattedTime() {
-      return this.list.map((item) => item.date.slice(11, 16));
+      return this.list.map((item) => dayjs(item.date).format('HH:mm'));
     },
     formattedDuration() {
       return this.list.map((item) => {
@@ -111,6 +123,14 @@ export default {
         const timeResult = seconds < 10 ? `0${seconds}` : seconds;
         return `${minutes}:${timeResult}`;
       });
+    },
+    formattedTelNumber() {
+      return this.list.map((item) =>
+        item.partner_data.phone.replace(
+          /^(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})$/,
+          '+$1 ($2) $3-$4-$5'
+        )
+      );
     },
   },
   mounted() {
@@ -235,6 +255,24 @@ export default {
 }
 
 /* --------------------good grade ends---------------- */
+
+/* --------------------bad grade starts---------------- */
+
+.table-calls__grade-marker--bad::before {
+  background-color: #ea1a4f;
+}
+
+.table-calls__grade-marker--bad,
+.table-calls__grade-marker--bad::after {
+  background-color: transparent;
+}
+
+.table-calls__grade-text--bad {
+  background-color: #fee9ef;
+  border-color: #ea1a4f;
+}
+
+/* --------------------bad grade ends---------------- */
 
 .table-calls__header-row th:not(:last-child) {
   padding-right: 10px;

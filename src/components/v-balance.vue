@@ -2,7 +2,7 @@
   <div class="balance">
     Баланс:<span class="balance__value">272 ₽</span>
     <button class="balance__button">
-      <img src="@/assets/balance-btn.svg" alt="plus" />
+      <img src="@/assets/svg/balance-btn.svg" alt="plus" />
     </button>
   </div>
 </template>

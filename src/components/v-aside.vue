@@ -1,5 +1,5 @@
 <template>
-  <img src="../assets/logo.svg" width="109" height="28" class="logo" />
+  <img src="../assets//svg/logo.svg" width="109" height="28" class="logo" />
   <v-main-nav></v-main-nav>
 </template>
 
