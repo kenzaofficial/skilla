@@ -1,6 +1,6 @@
 <template>
   <button type="button" class="calendar-button">
-    <img src="@/assets/calendar.svg" />3дня
+    <img src="@/assets/svg/calendar.svg" />3дня
   </button>
 </template>
 
@@ -17,6 +17,7 @@ export default {};
   border: none;
   column-gap: 10px;
   cursor: pointer;
+  background-color: transparent;
   transition: 0.8s;
   border-radius: 48px;
   color: blue;
@@ -36,10 +37,10 @@ export default {};
 }
 
 .calendar-button:before {
-  background: url(@/assets/arrowback.svg) no-repeat center;
+  background: url(@/assets/svg/arrowback.svg) no-repeat center;
 }
 
 .calendar-button:after {
-  background: url(@/assets/arrowforward.svg) no-repeat center;
+  background: url(@/assets/svg/arrowforward.svg) no-repeat center;
 }
 </style>

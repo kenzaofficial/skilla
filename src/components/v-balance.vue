@@ -2,7 +2,7 @@
   <div class="balance">
     Баланс:<span class="balance__value">272 ₽</span>
     <button class="balance__button">
-      <img src="@/assets/balance-btn.svg" alt="plus" />
+      <img src="@/assets/svg/balance-btn.svg" alt="plus" />
     </button>
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {};
   background-color: #fff;
   border-radius: 48px;
   padding: 9px 12px;
-  max-width: 145px;
+  max-width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;

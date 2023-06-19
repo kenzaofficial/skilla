@@ -20,11 +20,11 @@
   </ul>
   <input class="header__input" type="name" placeholder="ИП Сидорова Александра Михайловна">
   <button type="button" class="header__dropdown">
-    <img src="@/assets/dropdown.svg">
+    <img src="@/assets/svg/dropdown.svg">
   </button>
-  <img class="header__avatar" src="@/assets/avatar.jpg">
+  <img class="header__avatar" src="@/assets/img/avatar.jpg">
   <button type="button" class="header__dropdown">
-    <img src="@/assets/dropdown.svg">
+    <img src="@/assets/svg/dropdown.svg">
   </button>
 </template>
 
@@ -101,7 +101,7 @@ export default {};
   max-width: 250px;
   width: 100%;
   padding-left: 40px;
-  background-image: url(@/assets/search.svg);
+  background-image: url(@/assets/svg/search.svg);
   background-repeat: no-repeat;
 }
 

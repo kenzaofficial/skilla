@@ -18,19 +18,19 @@ export default {
           description: 'Все типы',
         },
         {
-          description: 'Все типы',
+          description: 'Все сотрудники',
         },
         {
-          description: 'Все типы',
+          description: 'Все звонки',
         },
         {
-          description: 'Все типы',
+          description: 'Все источники',
         },
         {
-          description: 'Все типы',
+          description: 'Все оценки',
         },
         {
-          description: 'Все типы',
+          description: 'Все ошибки',
         },
       ],
     };
@@ -41,11 +41,12 @@ export default {
 <style>
 .filter-row {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .filter-row__search {
   padding-left: 30px;
-  background: url(@/assets/search.svg) no-repeat center left;
+  background: url(@/assets/svg/search.svg) no-repeat center left 5px;
   border: none;
   color: #5e7793;
 }
@@ -61,9 +62,9 @@ export default {
 
 .filter-row__item {
   padding: 10px 20px 10px 10px;
-  background: url(@/assets/dropdown.svg) no-repeat center right 3px;
+  background: url(@/assets/svg/dropdown.svg) no-repeat center right 3px;
   cursor: pointer;
-  border-radius: 48px;
+  border-radius: 8px;
   color: #5e7793;
   transition: 0.3s;
 }

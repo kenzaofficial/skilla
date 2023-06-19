@@ -12,6 +12,7 @@
         <v-calendar-button></v-calendar-button>
       </div>
       <v-filter-row></v-filter-row>
+      <v-table-calls></v-table-calls>
     </template>
     <template v-slot:footer></template>
   </default-layout>
@@ -24,6 +25,7 @@ import VHeader from './components/v-header.vue';
 import VFilterRow from './components/v-filter-row.vue';
 import VBalance from './components/v-balance.vue';
 import VCalendarButton from './components/v-calendar-button.vue';
+import VTableCalls from './components/v-table-calls.vue';
 
 export default {
   name: 'App',
@@ -34,6 +36,7 @@ export default {
     VFilterRow,
     VBalance,
     VCalendarButton,
+    VTableCalls,
   },
 };
 </script>
@@ -48,6 +51,7 @@ body {
   display: grid;
   grid-template-columns: 240px auto;
   grid-template-rows: auto 1fr;
+  font-family: 'SF Pro';
 }
 
 .main {
